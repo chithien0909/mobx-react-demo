@@ -66,3 +66,20 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### use babel decorators
+
+yarn add @babel/plugin-proposal-decorators
+yarn add @babel/plugin-proposal-class-properties
+
+## In package.json file
+Add 
+ 
+"babel": {
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose" : true }]
+  ],
+  "presets": [
+    "react-app"
+  ]
+},
